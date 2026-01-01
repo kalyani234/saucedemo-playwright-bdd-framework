@@ -48,7 +48,7 @@ This project demonstrates **real-world SDET/QA skills**: BDD, clean architecture
 
 ## Quick Start
 
-```bash
+
 # Clone the repo
 git clone https://github.com/kalyani234/saucedemo-playwright-bdd-framework.git
 cd saucedemo-playwright-bdd-framework
