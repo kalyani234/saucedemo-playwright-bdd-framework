@@ -1,0 +1,21 @@
+{
+  "name": "saucedemo-bdd-framework",
+  "version": "1.0.0",
+  "description": "Professional Playwright BDD Framework with SauceDemo, API, k6, and Azure DevOps",
+  "scripts": {
+    "test": "echo \"Choose a specific test type:\" && echo \"  npm run test:bdd     → Run BDD/UI tests\" && echo \"  npm run test:api     → Run API tests\" && echo \"  npm run test:all     → Run both BDD + API\" && exit 1",
+    
+    "test:bdd": "cucumber-js",
+    "test:api": "playwright test tests/api",
+    "test:all": "cucumber-js && playwright test tests/api",
+    
+    "report": "node generate-report.js",
+    
+    "perf": "k6 run performance-tests/load.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@cucumber/cucumber": "^10.8.0",
+    "multiple-cucumber-html-reporter": "^3.6.0"
+  }
+}
