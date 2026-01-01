@@ -11,8 +11,8 @@ let apiRequestContext;
 BeforeAll(async function () {
   // Launch browser once for all scenarios
   browser = await chromium.launch({
-    headless: false,      // Change to false to see browser during local runs
-    slowMo: 800,      // Uncomment to slow down actions for debugging
+    headless: true,      // Change to false to see browser during local runs
+    // slowMo: 800,      // Uncomment to slow down actions for debugging
   });
 });
 
