@@ -49,25 +49,26 @@ This project demonstrates **real-world SDET/QA skills**: BDD, clean architecture
 ## Quick Start
 
 
-# Clone the repo
+## Clone the repo
+```
 git clone https://github.com/kalyani234/saucedemo-playwright-bdd-framework.git
 cd saucedemo-playwright-bdd-framework
+```
 
-# Install dependencies
-npm install
+## Install dependencies
+```npm install```
 
-# Install browsers
+## Install browsers
 npx playwright install --with-deps
 
-# Run Tests Locally
+## Run Tests Locally
+- Run UI + API BDD tests
+```npm run test:bdd```
 
-# Run UI + API BDD tests
-npm run test:bdd
+- Generate Cucumber HTML report
+````npm run report```
+- Open: reports/html-report/index.html
 
-# Generate Cucumber HTML report
-npm run report
-# Open: reports/html-report/index.html
-
-# Run k6 performance tests (results in Grafana Cloud)
-k6 cloud performance-tests/load.js
-k6 cloud performance-tests/spike.js
+## Run k6 performance tests (results in Grafana Cloud)
+```k6 cloud performance-tests/load.js
+k6 cloud performance-tests/spike.js```
