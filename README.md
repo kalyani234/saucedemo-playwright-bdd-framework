@@ -86,6 +86,9 @@ k6 cloud performance-tests/spike.js
 ## Test Execution 
 https://github.com/user-attachments/assets/85d18aed-224b-4720-a598-aed5bd32b8b9
 
+<img width="1199" height="613" alt="Performance_TestExecution" src="https://github.com/user-attachments/assets/58a420c6-434b-4c3b-9d23-1c620c672e6c" />
+
+
 ## Test Results
 
 ## Cucumber Test Report
