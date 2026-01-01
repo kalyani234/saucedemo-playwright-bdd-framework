@@ -8,17 +8,17 @@ This project demonstrates **real-world SDET/QA skills**: BDD, clean architecture
 [![Playwright](https://img.shields.io/badge/Playwright-Latest-blue)](https://playwright.dev/)
 [![Cucumber](https://img.shields.io/badge/Cucumber-BDD-orange)](https://cucumber.io/)
 [![k6](https://img.shields.io/badge/k6-Grafana_Cloud-yellow)](https://grafana.com/oss/k6/)
-[![Azure Pipelines](https://img.shields.io/badge/Azure_Pipelines-CI/CD-blue)](https://azure.microsoft.com/en-us/services/devops/pipelines/)
+[![GitHub Actions Workflow Status](https://github.com/kalyani234/saucedemo-playwright-bdd-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/kalyani234/saucedemo-playwright-bdd-framework/actions)
 
 ## Features
 
 - **BDD with Cucumber** – Human-readable Gherkin scenarios
-- **Page Object Model (POM)** – Clean, maintainable, reusable code
-- **UI Testing** – Complete checkout flow (login → add product → cart → checkout → success)
-- **API Testing** – Health checks + protected route validation (all in BDD)
+- **Page Object Model (POM)** – Clean, maintainable code
+- **UI Testing** – Full checkout flow (login → add product → cart → checkout → success)
+- **API Testing** – Health checks + protected route validation (via BDD)
 - **Performance Testing** – k6 load & spike tests with **Grafana Cloud k6** dashboards
-- **Reporting** – Beautiful Cucumber HTML report + k6 HTML reports
-- **CI/CD** – Azure DevOps pipeline (auto-run on push, publish reports as artifacts)
+- **CI/CD** – GitHub Actions (auto-run on push, publish reports)
+- **Beautiful Reports** – Cucumber HTML + k6 HTML reports
 
 ## Tech Stack
 
@@ -26,26 +26,22 @@ This project demonstrates **real-world SDET/QA skills**: BDD, clean architecture
 - @cucumber/cucumber
 - multiple-cucumber-html-reporter
 - k6 + Grafana Cloud k6
-- Azure DevOps Pipelines
+- GitHub Actions
 
 ## Project Structure
 ```
 ├── features/                # Gherkin feature files (UI + API)
-│   ├── ui/
-│   └── api/
 ├── pages/                   # Page Object Model classes
 ├── step-definitions/        # Cucumber step definitions
 ├── performance-tests/       # k6 load & spike scripts
 ├── reports/                 # Generated HTML reports
 ├── support/                 # Hooks (browser + API setup)
-├── azure-pipelines.yml      # CI/CD pipeline
+├── .github/workflows/       # GitHub Actions CI
 ├── playwright.config.js
 ├── cucumber.js
 └── package.json
 
 ```
-
-
 ## Quick Start
 
 
