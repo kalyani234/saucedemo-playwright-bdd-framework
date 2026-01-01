@@ -33,6 +33,13 @@ jobs:
       - name: Generate Cucumber Report
         run: npm run report
 
+      # NEW: Install k6
+      - name: Install k6
+        run: |
+          curl https://github.com/grafana/k6/releases/download/v0.53.0/k6-v0.53.0-linux-amd64.tar.gz -L | tar xz --strip-components=1
+          sudo mv k6 /usr/local/bin/k6
+          k6 version
+
       - name: Run k6 Load Test → Grafana Cloud
         run: k6 cloud performance-tests/load.js
         env:
