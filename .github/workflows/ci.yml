@@ -33,7 +33,6 @@ jobs:
       - name: Generate Cucumber Report
         run: npm run report
 
-      # NEW: Install k6
       - name: Install k6
         run: |
           curl https://github.com/grafana/k6/releases/download/v0.53.0/k6-v0.53.0-linux-amd64.tar.gz -L | tar xz --strip-components=1
@@ -43,17 +42,19 @@ jobs:
       - name: Run k6 Load Test → Grafana Cloud
         run: k6 cloud performance-tests/load.js
         env:
+          K6_CLOUD_TOKEN: ${{ secrets.GRAFANA_TOKEN }}
           K6_CLOUD_PROJECT_ID: 6283091
 
       - name: Run k6 Spike Test → Grafana Cloud
         run: k6 cloud performance-tests/spike.js
         env:
+          K6_CLOUD_TOKEN: ${{ secrets.GRAFANA_TOKEN }}
           K6_CLOUD_PROJECT_ID: 6283091
 
       - name: Upload Cucumber Report
         uses: actions/upload-artifact@v4
         with:
-          name: cucumber-report
+          name: cucumber-bdd-report
           path: reports/html-report/
 
       - name: Upload k6 Load Report
