@@ -83,6 +83,13 @@ k6 cloud performance-tests/load.js
 k6 cloud performance-tests/spike.js
 ```
 
+## Test Execution 
+https://github.com/user-attachments/assets/85d18aed-224b-4720-a598-aed5bd32b8b9
+
 ## Test Results
 
+## Cucumber Test Report
+https://github.com/user-attachments/assets/3d55b02d-6b79-463d-99ff-3f418c48f456
 
+## Performance Test Results - Grafana K6
+https://github.com/user-attachments/assets/80044691-427f-40a6-86c7-cebe09f034b8
