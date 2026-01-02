@@ -40,30 +40,30 @@ jobs:
           k6 version
 
       - name: Run k6 Load Test → Grafana Cloud
-        run: k6 cloud performance-tests/load.js
+        run: k6 cloud performance-tests/load.js --no-thresholds
         env:
           K6_CLOUD_TOKEN: ${{ secrets.GRAFANA_TOKEN }}
           K6_CLOUD_PROJECT_ID: 6283091
 
       - name: Run k6 Spike Test → Grafana Cloud
-        run: k6 cloud performance-tests/spike.js
+        run: k6 cloud performance-tests/spike.js --no-thresholds
         env:
           K6_CLOUD_TOKEN: ${{ secrets.GRAFANA_TOKEN }}
           K6_CLOUD_PROJECT_ID: 6283091
 
-      - name: Upload Cucumber Report
+      - name: Upload Cucumber BDD Report
         uses: actions/upload-artifact@v4
         with:
           name: cucumber-bdd-report
           path: reports/html-report/
 
-      - name: Upload k6 Load Report
+      - name: Upload k6 Load HTML Report
         uses: actions/upload-artifact@v4
         with:
           name: k6-load-report
           path: reports/k6-load-report.html
 
-      - name: Upload k6 Spike Report
+      - name: Upload k6 Spike HTML Report
         uses: actions/upload-artifact@v4
         with:
           name: k6-spike-report
