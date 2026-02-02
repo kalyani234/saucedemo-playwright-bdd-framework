@@ -1,4 +1,4 @@
-# SauceDemo Playwright BDD Framework
+# SauceDemo Playwright BDD Framework - UI,API, Performance Testing
 
 A **professional end-to-end automation testing framework** for [SauceDemo.com](https://www.saucedemo.com) built with modern tools and best practices (2026 standards).
 
